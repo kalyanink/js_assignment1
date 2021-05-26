@@ -1,0 +1,17 @@
+<html>
+    <script>
+        function strip_tags(str)
+        {
+            var div = document.createElement("div");
+            div.innerHTML = str;
+            var text = div.textContent || div.innerText || "";
+            return text;
+        }
+
+
+        const string = prompt('Enter the string including HTML and XML tags:');
+        const value = strip_tags(string);
+        console.log(value);
+
+    </script>
+</html>

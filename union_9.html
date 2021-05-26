@@ -1,0 +1,56 @@
+<html>
+    <script>
+                                                                   
+function union()                                                       
+{
+    
+const size1 = prompt('Enter array1 size: ');
+const size2 = prompt('Enter array2 size: ');
+    var array1 = [];
+    var array2=[];
+
+for(var i=0; i<size1; i++) {
+	
+
+	array1[i] = prompt('Enter Element ' + (i+1));
+}
+for(var i=0; i<size2; i++) {
+	
+	
+	array2[i] = prompt('Enter Element ' + (i+1));
+}
+
+// console.log(array1);
+// console.log(array2);
+document.write('<p>First array is: ' + array1 + '</p>');
+// document.write("<br>");
+document.write('<p>Second array is: ' + array2 + '</p>');
+// document.write("<br>");
+                           ///array 2
+	var result = [];                                             ///variable result
+	var obj = {};                                                /// variable obj
+	for (var i = 0; i < array1.length; i++)        //foor loop
+    {
+		obj[array1[i]] = true;                    
+	}
+	for (var j = 0; j < array2.length; j++)                  //foor loop            
+    {
+		
+obj[array2[j]] = true;
+}
+	
+for(const x in obj)
+    {
+		
+result.push(x);
+	}
+	
+return result;                                    //return result
+}
+    
+
+document.write('<p>Unique elements from the given two arrays is: ' + union() + '</p>');                          //display result
+ 
+</script>
+ 
+</html>

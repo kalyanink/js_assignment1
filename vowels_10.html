@@ -1,0 +1,23 @@
+<html>
+    <script>
+        const string = prompt('Enter a string: ');
+        var counts = {};
+        var ch, index, len, count;
+        for (index = 0, len = string.length; index < len; ++index) 
+        {    
+            ch = string.charAt(index); 
+            count = counts[ch];  
+            counts[ch] = count ? count + 1 : 1;
+        }
+        var vowel = ['a','e','i','o','u','A','E','I','O','U'];
+        counts.sort();
+        for (ch in counts) 
+        {
+            if(vowel.includes(ch))
+                    {
+                        console.log(ch + " count: " + counts[ch]);
+                    }
+        
+        }
+    </script>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<body>
+      <h2>JavaScript program to check if the input integer is in betwween 50 and 100</h2>
+      <p>Please input a number</p>
+      <input id="num">
+      <button type="button" onclick="myFunction()">Submit</button>
+      <p id="demo"></p>
+      <script>
+          function myFunction() 
+          {
+            var x, text;
+            x = document.getElementById("num").value;
+            if (isNaN(x))
+            {
+                alert('Please enter a valid number');
+            }
+            if(x <= 50 || x >= 100) {
+              text = "Input is not between 50 and 100";
+            } else {
+              text = "Input is between 50 and 100";
+            }
+            document.getElementById("demo").innerHTML = text;
+          }
+      </script>
+
+</body>
+</html> 
